@@ -18,7 +18,7 @@ const BOB_AMP: float = 0.08
 var t_bob: float= 0.0
 
 
-var gravity = 9.8
+@export var gravity = 9.8
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D

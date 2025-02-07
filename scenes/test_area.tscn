@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bxuvu3jmmrmcl"]
 
-[ext_resource type="PackedScene" uid="uid://d24mvvyg6x1m5" path="res://scenes/player.tscn" id="1_c2sc5"]
-[ext_resource type="PackedScene" uid="uid://2x5qx84q5n5i" path="res://assets/models/ship.glb" id="2_doccd"]
+[ext_resource type="PackedScene" uid="uid://d24mvvyg6x1m5" path="res://scenes/player.tscn" id="1_hkjor"]
+[ext_resource type="PackedScene" uid="uid://2x5qx84q5n5i" path="res://assets/models/ship.glb" id="2_pvtel"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kg06s"]
 sky_top_color = Color(0.384252, 0.473759, 0.421457, 1)
@@ -36,6 +36,7 @@ environment = SubResource("Environment_wllpi")
 transform = Transform3D(-0.78152, -0.123314, 0.611571, 0, 0.980271, 0.197657, -0.62388, 0.154473, -0.766102, 0, 0, 0)
 light_energy = 3.15
 shadow_enabled = true
+directional_shadow_max_distance = 467.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -45,10 +46,10 @@ mesh = SubResource("BoxMesh_lo0wn")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_slfox")
 
-[node name="player_3d" parent="." instance=ExtResource("1_c2sc5")]
+[node name="player_3d" parent="." instance=ExtResource("1_hkjor")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8097, 0)
 
-[node name="ship" parent="." instance=ExtResource("2_doccd")]
+[node name="ship" parent="." instance=ExtResource("2_pvtel")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 31.4566, 30.9956, -124.498)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
